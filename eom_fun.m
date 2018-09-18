@@ -1,6 +1,13 @@
 %% Description
-%Function to define the orbital dynamics of the
-%two-body problem along with external perturbation forces.
+% Function to define the orbital dynamics of the
+% two-body problem along with external perturbation forces.
+
+% Called from eom.m
+
+%% 
+% Shakeeb Ahmad
+% ECE 595 - Spacecraft Navigation Class
+% Problem 4 (A)
 
 %% Function Definition
 
