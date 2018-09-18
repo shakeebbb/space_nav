@@ -7,7 +7,7 @@
 %% 
 % Shakeeb Ahmad
 % ECE 595 - Spacecraft Navigation Class
-% Problem 4 (A)
+% HW1 - Problem 4 (A)
 
 %% Function Definition
 
