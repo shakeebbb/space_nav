@@ -5,7 +5,7 @@ clear all
 % Shakeeb Ahmad
 % ECE 595 - Spacecraft Navigation Class
 
-% HW 1 - Problem 4 (B)
+% HW 1 - Problem 4 (C)
 
 %%
 

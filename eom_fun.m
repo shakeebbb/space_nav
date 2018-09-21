@@ -7,11 +7,18 @@
 %% 
 % Shakeeb Ahmad
 % ECE 595 - Spacecraft Navigation Class
-% HW1 - Problem 4 (A)
+% HW1 - Problem 4 (A) and (F)
+
+% Problem 4 (A) if useExternalForce = 0
+% Problem 4 (B) if useExternalForce = 1
+
+% When the external force in the velocity direction is applied
+% (useExternalForce = 1), the spacecraft start moving tangent to the orbit
+% in a straight line.
 
 %% Function Definition
 
-function dydt = eom_fun(t,y,F)
+function dydt = eom_fun(t,y,useExternalForce)
 
 G=6.6742e-11;  % Universial gravitational constant [N m^2 / kg^2]
 M = 5.972e24; % Mass of the Earth
@@ -30,6 +37,11 @@ mu = G * (M + m); %
 v = y(4:6);
 dydt(1:3, 1) = v;
 r = y(1:3);
-dydt(4:6, 1) = -mu * r / (r' * r);
+if useExternalForce == 1
+F = v/norm(v); % Force of 1 N in the direction of velocity
+else
+F = [0;0;0]; % External Perturbation Forces
+end
+dydt(4:6, 1) = -mu * r / (r' * r)^(3/2) + F/m;
 
 end
