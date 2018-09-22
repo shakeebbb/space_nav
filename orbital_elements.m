@@ -37,7 +37,6 @@ A=1.5;                             %Area for drag [ m^2 ]
 t_final = 7*60*60;          %Total time of the simulation
 t_inc = 60;                  %Time increment of data
 
-thruster_on_off=0;                  %Turn on or off the thruster in velocity direction [ 1 is on, 0 is off ]s
 drag_on_off=0;
 srp_on_off=1;
 
