@@ -13,8 +13,7 @@
 % Problem 4 (B) if useExternalForce = 1
 
 % When the external force in the velocity direction is applied
-% (useExternalForce = 1), the spacecraft start moving tangent to the orbit
-% in a straight line.
+% (useExternalForce = 1), the spacecraft's orbit changes.
 
 %% Function Definition
 
