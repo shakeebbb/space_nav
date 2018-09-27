@@ -37,14 +37,24 @@ A=1.5;                             %Area for drag [ m^2 ]
 t_final = 7*60*60;          %Total time of the simulation
 t_inc = 60;                  %Time increment of data
 
-drag_on_off=0;
-srp_on_off=1;
 
+%% 2 Body Problem with Solar Radiation Pressure
 
-%% 
 odeoptions=odeset('RelTol', 1e-10, 'AbsTol',1e-12);
 tspan=[0:t_inc:t_final];
 
-[t, y] = ode45(@(t,y) SRP_fun(t,y,G,M,m,A), tspan, sc_X, odeoptions);
+[t, y] = ode45(@(t,y) force_fun(t,y,G,M,m,A,CD,0), tspan, sc_X, odeoptions);
 
 plot3(y(:,1),y(:,2),y(:,3));
+title('With SRP');
+figure
+
+%% 2 Body Problem with Drag Force
+
+odeoptions=odeset('RelTol', 1e-10, 'AbsTol',1e-12);
+tspan=[0:t_inc:t_final];
+
+[t, y] = ode45(@(t,y) force_fun(t,y,G,M,m,A,CD,1), tspan, sc_X, odeoptions);
+
+plot3(y(:,1),y(:,2),y(:,3));
+title('With Drag Force')
