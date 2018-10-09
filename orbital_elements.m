@@ -46,7 +46,9 @@ tspan=[0:t_inc:t_final];
 [t, y] = ode45(@(t,y) force_fun(t,y,G,M,m,A,CD,0), tspan, sc_X, odeoptions);
 
 plot3(y(:,1),y(:,2),y(:,3));
+%plot(y(:,1),y(:,2));
 title('With SRP');
+grid on
 figure
 
 %% 2 Body Problem with Drag Force
@@ -57,4 +59,5 @@ tspan=[0:t_inc:t_final];
 [t, y] = ode45(@(t,y) force_fun(t,y,G,M,m,A,CD,1), tspan, sc_X, odeoptions);
 
 plot3(y(:,1),y(:,2),y(:,3));
+grid on
 title('With Drag Force')

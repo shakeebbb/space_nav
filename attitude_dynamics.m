@@ -19,4 +19,4 @@ A = [eye(3) zeros(3);
      I3*a 0 0 0 0 0;
      ]
  
- eig(A)
+eig(A)
