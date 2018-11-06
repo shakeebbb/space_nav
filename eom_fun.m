@@ -19,7 +19,7 @@
 
 function dydt = eom_fun(t,y,useExternalForce)
 
-G=6.6742e-11;  % Universial gravitational constant [N m^2 / kg^2]
+G = 6.6742e-11;  % Universial gravitational constant [N m^2 / kg^2]
 M = 5.972e24; % Mass of the Earth
 m = 100; % Mass of the Spacecraft
 mu = G * (M + m); % 
